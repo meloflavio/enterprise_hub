@@ -1,0 +1,22 @@
+sonata_user:
+    security_acl: false
+    manager_type: orm
+    class:
+        user: App\Entity\User
+#        group: App\UFT\UserBundle\Entity\Grupo
+
+    admin:                  # Admin Classes
+        user:
+            class:          App\Admin\Userdmin
+            translation:    SonataUserBundle
+
+#        group:
+#            class:          App\UFT\UserBundle\Admin\GrupoAdmin
+#            controller:     SonataAdminBundle:CRUD
+#            translation:    SonataUserBundle
+    impersonating:
+        route: sonata_admin_dashboard
+    resetting:
+        email:
+            address: "naoresponder@dti.uft.edu.br"
+            sender_name: "GIS"

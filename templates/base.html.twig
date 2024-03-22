@@ -1,17 +1,42 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+{% extends '@SonataAdmin/standard_layout.html.twig' %}
+{% block sonata_head_title %}
+    {{ 'app_full_name'|trans({}, 'App') }}
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+    {% if _title is not empty %}
+        {{ _title|striptags|raw }}
+    {% else %}
+        {% if action is defined %}
+            -
+            {{ render_breadcrumbs_for_title(admin, action) }}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block logo %}
+    {% apply spaceless %}
+        <a class="logo" style="min-height: 51px" href="{{ path('sonata_admin_dashboard') }}">
+            {% if 'icon' == sonata_config.getOption('logo_content') or 'all' == sonata_config.getOption('logo_content') %}
+                <img src="{{ asset(sonata_config.logo) }}"
+                     alt="{{ sonata_config.title }}">
+                <span>{{ sonata_config.title }}</span>
+
+            {% endif %}
+        </a>
+    {% endapply %}
+{% endblock %}
+
+
+{% block sonata_sidebar_search %}
+{% endblock sonata_sidebar_search %}
+
+
+{% block side_bar_after_nav %}
+    {{ parent() }}
+    <div class="menu-info text-sm absolute bottom-1 border-t">
+        <div class="text-center text-down-01"><strong>Copyright &copy; {{ "now"|date("Y") }} <a
+                    href="https://github.com/meloflavio">@meloflavio</a>. <br/>Versão
+                {% include 'version.html.twig' %}
+            </strong></div>
+        <div class="text-center text-down-01">Todos os direitos reservados.</div>
+    </div>
+{% endblock side_bar_after_nav %}

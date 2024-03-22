@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pt-BR" target-language="pt-BR" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="EhVukhv" resname="Id">
+        <source>Id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="UIaQBjX" resname="Nome">
+        <source>Nome</source>
+        <target>Nome</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>Ações</target>
+      </trans-unit>
+      <trans-unit id="IbERy.5" resname="Default">
+        <source>Default</source>
+        <target>Padrão</target>
+      </trans-unit>
+      <trans-unit id="T.a0BlX" resname="Administradores">
+        <source>Administradores</source>
+        <target>Administradores</target>
+      </trans-unit>
+      <trans-unit id="EbAs9D9" resname="Descricao">
+        <source>Descricao</source>
+        <target>Descrição</target>
+      </trans-unit>
+      <trans-unit id="lZB.Bqo1" resname="dashboard">
+        <source>dashboard</source>
+        <target>Página Inicial</target>
+      </trans-unit>
+      <trans-unit id="9ZB.Bqo1" resname="logout">
+        <source>logout</source>
+        <target>Sair</target>
+      </trans-unit>
+      <trans-unit id="8dg7.Tygh" resname="group_admin">
+        <source>group_admin</source>
+        <target>Administração</target>
+      </trans-unit>
+      <trans-unit id="5ft8.9ett" resname="sign_in">
+        <source>sign_in</source>
+        <target>Entrar</target>
+      </trans-unit>
+      <trans-unit id="place_select" resname="place_select">
+        <source>place_select</source>
+        <target>-- Selecione --</target>
+      </trans-unit>
+      <trans-unit id="app_full_name" resname="app_full_name">
+        <source>app_full_name</source>
+        <target>Enterprise HUB</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

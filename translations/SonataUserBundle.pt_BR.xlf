@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pt-BR" target-language="pt-BR" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+       <trans-unit id="ROLE_ADMIN" resname="ROLE_ADMIN">
+        <source>ROLE_ADMIN</source>
+        <target>Administrador</target>
+      </trans-unit>
+      <trans-unit id="ROLE_SUPER_ADMIN" resname="ROLE_SUPER_ADMIN">
+        <source>ROLE_SUPER_ADMIN</source>
+        <target>Super Administrador</target>
+      </trans-unit>
+      <trans-unit id="ROLE_USER" resname="ROLE_USER">
+        <source>ROLE_USER</source>
+        <target>Usuário Padrão</target>
+      </trans-unit>
+      <trans-unit id="ROLE_ALLOWED_TO_SWITCH" resname="ROLE_ALLOWED_TO_SWITCH">
+        <source>ROLE_ALLOWED_TO_SWITCH</source>
+        <target>Impersonar</target>
+      </trans-unit>
+      <trans-unit id="ROLE_SONATA_ADMIN" resname="ROLE_SONATA_ADMIN">
+        <source>ROLE_SONATA_ADMIN</source>
+        <target>Administrador do Sonata</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,9 @@
+# config/packages/sonata_intl.yaml
+sonata_intl:
+    timezone:
+        default: America/Araguaina
+        detectors:
+            - sonata.intl.timezone_detector.user
+            - sonata.intl.timezone_detector.locale_aware
+        locales:
+            pt_BR: America/Araguaina
