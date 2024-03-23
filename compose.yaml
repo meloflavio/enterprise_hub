@@ -1,11 +1,5 @@
 services:
-  redis:
-    image: redis:5-alpine
-    networks:
-      - entreprisehub
-    ports: [ "6379" ]
   database:
-    container_name: enterprisehub_database
     image: mariadb:10.11.2
     networks:
       - entreprisehub

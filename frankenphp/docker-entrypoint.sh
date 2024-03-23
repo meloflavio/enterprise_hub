@@ -29,7 +29,7 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 
 	if grep -q ^DATABASE_URL= .env; then
 		echo "Waiting for the database to be ready..."
-		sleep 10
+		sleep 5
 		if [ "$( find ./migrations -iname '*.php' -print -quit )" ]; then
 			php bin/console doctrine:migrations:migrate --no-interaction
 		fi

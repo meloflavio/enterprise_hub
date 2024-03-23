@@ -1,51 +1,31 @@
-# Symfony Docker
+# Enterprise Hub
 
-A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework,
-with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) inside!
+Projeto simples de um sistema com autenticação e cadatro de empresas. Utilizando:
+1. PHP 8.3
+1. Symfony 6
+1. Caddy
+1. Docker
+1. MariaDB
 
-![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
+## Instalação
 
-## Getting Started
+### Usando Comandos Make
 
-1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
-2. Run `docker compose build --no-cache` to build fresh images
-3. Run `docker compose up --pull always -d --wait` to start the project
-4. Open `https://localhost` in your favorite web browser and [accept the auto-generated TLS certificate](https://stackoverflow.com/a/15076602/1352334)
-5. Run `docker compose down --remove-orphans` to stop the Docker containers.
+Os comandos make foram configurados para funcionar com o `docker compose`. Caso você utilize `docker-compose`, altere a segunda linha do arquivo Makefile para: `DOCKER_COMP = APP_ENV=dev HTTP_PORT=8000 HTTPS_PORT=443 SERVER_NAME=http://localhost docker-compose` 
+1. Execute `make build` para construir imagens novas
+1. Execute `make up` para iniciar o projeto
+1. Abra `http://localhost:8000`, utilize o usuario `admin` e senha `admin` para acessar o sistema
+1. Execute `make down` para parar os contêineres Docker.
 
-## Features
+### Usando Docker
 
-* Production, development and CI ready
-* Just 1 service by default
-* Blazing-fast performance thanks to [the worker mode of FrankenPHP](https://github.com/dunglas/frankenphp/blob/main/docs/worker.md) (automatically enabled in prod mode)
-* [Installation of extra Docker Compose services](docs/extra-services.md) with Symfony Flex
-* Automatic HTTPS (in dev and prod)
-* HTTP/3 and [Early Hints](https://symfony.com/blog/new-in-symfony-6-3-early-hints) support
-* Real-time messaging thanks to a built-in [Mercure hub](https://symfony.com/doc/current/mercure.html)
-* [Vulcain](https://vulcain.rocks) support
-* Native [XDebug](docs/xdebug.md) integration
-* Super-readable configuration
+1. Execute `docker compose build --no-cache` para construir imagens novas
+1. Execute `docker compose up --pull always -d --wait` para iniciar o projeto
+1. Abra `https://localhost` no seu navegador web favorito e que aceite o certificado TLS gerado automaticamente, utilize o usuario `admin` e senha `admin` para acessar o sistema
+1. Execute `docker compose down --remove-orphans` para parar os contêineres Docker.
 
-**Enjoy!**
+Caso seu navegador nao suporte o certificado TLS gerado automaticamente, execute o docker compose com o comando `HTTP_PORT=8000 SERVER_NAME=http://localhost docker compose up --pull always -d --wait` e abra `http://localhost:8000`,  caso o navegador continuar tentando abrir com HTTPS abra em uma aba anônima.
 
-## Docs
 
-1. [Build options](docs/build.md)
-2. [Using Symfony Docker with an existing project](docs/existing-project.md)
-3. [Support for extra services](docs/extra-services.md)
-4. [Deploying in production](docs/production.md)
-5. [Debugging with Xdebug](docs/xdebug.md)
-6. [TLS Certificates](docs/tls.md)
-7. [Using MySQL instead of PostgreSQL](docs/mysql.md)
-8. [Using Alpine Linux instead of Debian](docs/alpine.md)
-9. [Using a Makefile](docs/makefile.md)
-10. [Updating the template](docs/updating.md)
-11. [Troubleshooting](docs/troubleshooting.md)
-
-## License
-
-Symfony Docker is available under the MIT License.
-
-## Credits
-
-Created by [Kévin Dunglas](https://dunglas.dev), co-maintained by [Maxime Helias](https://twitter.com/maxhelias) and sponsored by [Les-Tilleuls.coop](https://les-tilleuls.coop).
+### Observações
+Há também a possibilidade de utilizar o login de usuario comum com login `user` e senha `user`, porém o usuario comum só tem acesso à lista e detalhes de empresas cadastradas.

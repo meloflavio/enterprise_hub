@@ -1,5 +1,10 @@
 # Production environment override
 services:
+  redis:
+    image: redis:5-alpine
+    networks:
+      - entreprisehub
+    ports: [ "6379" ]
   php:
     build:
       context: .
