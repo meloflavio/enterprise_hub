@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="pt-BR" target-language="pt-BR" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="name" >
+                <source>The name is required.</source>
+                <target>O nome é obrigatório.</target>
+            </trans-unit>
+            <trans-unit id="city" >
+                <source>The city is required.</source>
+                <target>A cidade é obrigatória.</target>
+            </trans-unit>
+            <trans-unit id="uf" >
+                <source>The uf is required.</source>
+                <target>A UF é obrigatória.</target>
+            </trans-unit>
+            <trans-unit id="cnpj" >
+                <source>The CNPJ is required.</source>
+                <target>O CNPJ é obrigatório.</target>
+            </trans-unit>
+            <trans-unit id="cnpj_invalid">
+                <source>The CNPJ is invalid.</source>
+                <target>O CNPJ informado é inválido.</target>
+            </trans-unit>
+            <trans-unit id="cnpj_used">
+                <source>This CNPJ is already in use.</source>
+                <target>Este CNPJ já foi cadastrado.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,43 @@
+{% extends '@SonataAdmin/CRUD/edit.html.twig' %}
+{% import "macro.html.twig" as macro_uft %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ macro_uft.mascaras(['cnpj','telefone']) }}
+
+    <script>
+
+
+        $(document).ready(function () {
+            $(document).ready(function () {
+                var $state = $('#{{ admin.uniqid }}_state');
+                $state.change(function () {
+                    var $form = $(this).closest('form');
+                    // Simulate form data, but only include the selected sport value.
+                    var data = {};
+                    data[$state.attr('name')] = $state.val();
+                    data['only_request_data'] = 1;
+                    // Submit data via AJAX to the form's action path.
+                    $.ajax({
+                        url: $form.attr('action'),
+                        type: $form.attr('method'),
+                        data: data,
+                        complete: function (html) {
+                            let oldSelect = $('#{{ admin.uniqid }}_city');
+                            let newContent = $(html.responseText).find('#{{ admin.uniqid }}_city');
+                            oldSelect.empty();
+                            newContent.find('option').each(function () {
+                                oldSelect.append($(this).clone());
+                            });
+                            if (oldSelect.find('option[value=""]').length === 0) {
+                                let emptyOption = $('<option value="" selected="selected">---- Selecione uma Cidade ----</option>');
+                                oldSelect.prepend(emptyOption); // Adiciona a opção vazia ao início
+                            }
+                            oldSelect.val(null).trigger('change');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+{% endblock %}

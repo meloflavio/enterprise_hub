@@ -1,0 +1,65 @@
+
+{# Adiciona mascaras, para utilizar passe como parâmetro um array com quais mascaras deseja aplicar ao formulario
+@params array() formato json
+Ex: ['cpf','telefone']
+#}
+{% macro mascaras(options) %}
+    {% import _self as forms %}
+    <script src="{{ asset('js/mask.min.js') }}"></script>
+    {% for val in options %}
+        {% if val =='cpf' %}
+            {{ forms.mascara_cpf() }}
+        {% endif %}
+        {% if val =='cnpj' %}
+            {{ forms.mascara_cnpj() }}
+        {% endif %}
+        {% if val =='telefone' %}
+            {{ forms.mascara_telefone() }}
+        {% endif %}
+
+    {% endfor %}
+{% endmacro %}
+{# Adiciona mascara aos campos com a classe .telefone #}
+{% macro mascara_telefone() %}
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            //Mascara de telefone
+            $('.telefone').inputmask("+55 (99) 9999-9999[9]").keyup(function () {
+                var valor = $(this).val();
+                if (valor[9] == '9') {
+                    $(this).inputmask("+55 (99) 99999-9999");
+                } else {
+                    $(this).inputmask("+55 (99) 9999-9999");
+                }
+            }).focusout(function () {
+                var valor = $(this).val();
+                if (valor.replace(/\D/g, '').length == '12') {
+                    $(this).inputmask("+55 (99) 9999-9999");
+                }
+            }).focusin(function () {
+                $(this).inputmask("+55 (99) 99999-9999");
+            });
+        });
+    </script>
+{% endmacro %}
+
+{# Adiciona mascara aos campos com a classe .cpf #}
+{% macro mascara_cpf() %}
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            //Mascara de cpf
+            $('.cpf').inputmask("999.999.999-99");
+
+        });
+    </script>
+{% endmacro %}
+{# Adiciona mascara aos campos com a classe .cnpj #}
+{% macro mascara_cnpj() %}
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            //Mascara de cnpj
+            $('.cnpj').inputmask("99.999.999/9999-99");
+
+        });
+    </script>
+{% endmacro %}
