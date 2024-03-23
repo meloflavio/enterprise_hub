@@ -11,6 +11,8 @@ sonata_admin:
     options:
         skin: 'skin-blue-light'
         logo_content: 'icon'
+        default_translation_domain: App
+
     templates:
         layout: 'base.html.twig'
 sonata_block:

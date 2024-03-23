@@ -1,58 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="pt-BR" target-language="pt-BR" datatype="plaintext" original="file.ext">
-    <header>
-      <tool tool-id="symfony" tool-name="Symfony"/>
-    </header>
-    <body>
-      <trans-unit id="EhVukhv" resname="Id">
-        <source>Id</source>
-        <target>Id</target>
-      </trans-unit>
-      <trans-unit id="UIaQBjX" resname="Nome">
-        <source>Nome</source>
-        <target>Nome</target>
-      </trans-unit>
-      <trans-unit id=".4BZ3Gd" resname="Actions">
-        <source>Actions</source>
-        <target>Ações</target>
-      </trans-unit>
-      <trans-unit id="IbERy.5" resname="Default">
-        <source>Default</source>
-        <target>Padrão</target>
-      </trans-unit>
-      <trans-unit id="T.a0BlX" resname="Administradores">
-        <source>Administradores</source>
-        <target>Administradores</target>
-      </trans-unit>
-      <trans-unit id="EbAs9D9" resname="Descricao">
-        <source>Descricao</source>
-        <target>Descrição</target>
-      </trans-unit>
-      <trans-unit id="lZB.Bqo1" resname="dashboard">
-        <source>dashboard</source>
-        <target>Página Inicial</target>
-      </trans-unit>
-      <trans-unit id="9ZB.Bqo1" resname="logout">
-        <source>logout</source>
-        <target>Sair</target>
-      </trans-unit>
-      <trans-unit id="8dg7.Tygh" resname="group_admin">
-        <source>group_admin</source>
-        <target>Administração</target>
-      </trans-unit>
-      <trans-unit id="5ft8.9ett" resname="sign_in">
-        <source>sign_in</source>
-        <target>Entrar</target>
-      </trans-unit>
-      <trans-unit id="place_select" resname="place_select">
-        <source>place_select</source>
-        <target>-- Selecione --</target>
-      </trans-unit>
-      <trans-unit id="app_full_name" resname="app_full_name">
-        <source>app_full_name</source>
-        <target>Enterprise HUB</target>
-      </trans-unit>
-    </body>
-  </file>
+    <file source-language="pt-BR" target-language="pt-BR" datatype="plaintext" original="file.ext">
+        <header>
+            <tool tool-id="symfony" tool-name="Symfony"/>
+        </header>
+        <body>
+            <trans-unit id="EhVukhv" resname="Id">
+                <source>Id</source>
+                <target>Id</target>
+            </trans-unit>
+            <trans-unit id="UIaQBjX" resname="Nome">
+                <source>Nome</source>
+                <target>Nome</target>
+            </trans-unit>
+            <trans-unit id=".4BZ3Gd" resname="Actions">
+                <source>Actions</source>
+                <target>Ações</target>
+            </trans-unit>
+            <trans-unit id="IbERy.5" resname="Default">
+                <source>Default</source>
+                <target>Padrão</target>
+            </trans-unit>
+            <trans-unit id="T.a0BlX" resname="Administradores">
+                <source>Administradores</source>
+                <target>Administradores</target>
+            </trans-unit>
+            <trans-unit id="EbAs9D9" resname="Descricao">
+                <source>Descricao</source>
+                <target>Descrição</target>
+            </trans-unit>
+            <trans-unit id="lZB.Bqo1" resname="dashboard">
+                <source>dashboard</source>
+                <target>Página Inicial</target>
+            </trans-unit>
+            <trans-unit id="9ZB.Bqo1" resname="logout">
+                <source>logout</source>
+                <target>Sair</target>
+            </trans-unit>
+            <trans-unit id="8dg7.Tygh" resname="group_admin">
+                <source>group_admin</source>
+                <target>Administração</target>
+            </trans-unit>
+            <trans-unit id="admin" resname="admin">
+                <source>admin</source>
+                <target>Administração</target>
+            </trans-unit>
+            <trans-unit id="5ft8.9ett" resname="sign_in">
+                <source>sign_in</source>
+                <target>Entrar</target>
+            </trans-unit>
+            <trans-unit id="place_select" resname="place_select">
+                <source>place_select</source>
+                <target>-- Selecione --</target>
+            </trans-unit>
+            <trans-unit id="app_full_name" resname="app_full_name">
+                <source>app_full_name</source>
+                <target>Enterprise HUB</target>
+            </trans-unit>
+            <trans-unit id="company_label" resname="company_label">
+                <source>company_label</source>
+                <target>Empresa</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_company_list" resname="breadcrumb.link_company_list">
+                <source>breadcrumb.link_company_list</source>
+                <target>Empresas</target>
+            </trans-unit>
+            <trans-unit id="form.label_id">
+                <source>form.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="show.label_id">
+                <source>show.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="filter.label_id">
+                <source>filter.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="form.label_name">
+                <source>form.label_name</source>
+                <target>Nome</target>
+            </trans-unit>
+            <trans-unit id="list.label_name">
+                <source>list.label_name</source>
+                <target>Nome</target>
+            </trans-unit>
+            <trans-unit id="show.label_name">
+                <source>show.label_name</source>
+                <target>Nome</target>
+            </trans-unit>
+            <trans-unit id="filter.label_name">
+                <source>filter.label_name</source>
+                <target>Nome</target>
+            </trans-unit>
+            <trans-unit id="form.label_address">
+                <source>form.label_address</source>
+                <target>Endereço</target>
+            </trans-unit>
+            <trans-unit id="list.label_address">
+                <source>list.label_address</source>
+                <target>Endereço</target>
+            </trans-unit>
+            <trans-unit id="show.label_address">
+                <source>show.label_address</source>
+                <target>Endereço</target>
+            </trans-unit>
+            <trans-unit id="filter.label_address">
+                <source>filter.label_address</source>
+                <target>Endereço</target>
+            </trans-unit>
+            <trans-unit id="form.label_email">
+                <source>form.label_email</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="list.label_email">
+                <source>list.label_email</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="show.label_email">
+                <source>show.label_email</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="filter.label_email">
+                <source>filter.label_email</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="form.label_phone">
+                <source>form.label_phone</source>
+                <target>Telefone</target>
+            </trans-unit>
+            <trans-unit id="list.label_phone">
+                <source>list.label_phone</source>
+                <target>Telefone</target>
+            </trans-unit>
+            <trans-unit id="show.label_phone">
+                <source>show.label_phone</source>
+                <target>Telefone</target>
+            </trans-unit>
+            <trans-unit id="filter.label_phone">
+                <source>filter.label_phone</source>
+                <target>Telefone</target>
+            </trans-unit>
+            <trans-unit id="form.label_cnpj">
+                <source>form.label_cnpj</source>
+                <target>CNPJ</target>
+            </trans-unit>
+            <trans-unit id="list.label_cnpj">
+                <source>list.label_cnpj</source>
+                <target>CNPJ</target>
+            </trans-unit>
+            <trans-unit id="show.label_cnpj">
+                <source>show.label_cnpj</source>
+                <target>CNPJ</target>
+            </trans-unit>
+            <trans-unit id="filter.label_cnpj">
+                <source>filter.label_cnpj</source>
+                <target>CNPJ</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_company_create">
+                <source>breadcrumb.link_company_create</source>
+                <target>Nova Empresa</target>
+            </trans-unit>
+            <trans-unit id="form.group_company_label">
+                <source>form.group_company_label</source>
+                <target>Empresa</target>
+            </trans-unit>
+            <trans-unit id="form.label_city">
+                <source>form.label_city</source>
+                <target>Cidade</target>
+            </trans-unit>
+            <trans-unit id="list.label_city">
+                <source>list.label_city</source>
+                <target>Cidade</target>
+            </trans-unit>
+            <trans-unit id="show.label_city">
+                <source>show.label_city</source>
+                <target>Cidade</target>
+            </trans-unit>
+            <trans-unit id="filter.label_city">
+                <source>filter.label_city</source>
+                <target>Cidade</target>
+            </trans-unit>
+            <trans-unit id="form.label_state">
+                <source>form.label_state</source>
+                <target>Estado</target>
+            </trans-unit>
+            <trans-unit id="list.label_state">
+                <source>list.label_state</source>
+                <target>Estado</target>
+            </trans-unit>
+            <trans-unit id="show.label_state">
+                <source>show.label_state</source>
+                <target>Estado</target>
+            </trans-unit>
+            <trans-unit id="filter.label_state">
+                <source>filter.label_state</source>
+                <target>Estado</target>
+            </trans-unit>
+
+            <trans-unit id="place_state">
+                <source>place_state</source>
+                <target>Selecione um estado</target>
+            </trans-unit>
+            <trans-unit id="form.label__actions">
+                <source>form.label__actions</source>
+                <target>Ações</target>
+            </trans-unit>
+            <trans-unit id="list.label__actions">
+                <source>list.label__actions</source>
+                <target>Ações</target>
+            </trans-unit>
+            <trans-unit id="show.label__actions">
+                <source>show.label__actions</source>
+                <target>Ações</target>
+            </trans-unit>
+            <trans-unit id="filter.label__actions">
+                <source>filter.label__actions</source>
+                <target>Ações</target>
+            </trans-unit>
+            <trans-unit id="show.group_company_label">
+                <source>show.group_company_label</source>
+                <target>Dados da Empresa</target>
+            </trans-unit>
+            <trans-unit id="form.label_city_full">
+                <source>form.label_city_full</source>
+                <target>Cidade</target>
+            </trans-unit>
+            <trans-unit id="list.label_city_full">
+                <source>list.label_city_full</source>
+                <target>Cidade</target>
+            </trans-unit>
+            <trans-unit id="show.label_city_full">
+                <source>show.label_city_full</source>
+                <target>Cidade</target>
+            </trans-unit>
+            <trans-unit id="filter.label_city_full">
+                <source>filter.label_city_full</source>
+                <target>Cidade</target>
+            </trans-unit>
+
+        </body>
+    </file>
 </xliff>

@@ -25,6 +25,7 @@
         <source>ROLE_SONATA_ADMIN</source>
         <target>Administrador do Sonata</target>
       </trans-unit>
+
     </body>
   </file>
 </xliff>

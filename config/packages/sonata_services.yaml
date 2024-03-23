@@ -5,7 +5,6 @@ services:
   admin.abstract:
     class: App\Admin\AbstractAdmin
     abstract: true
-    autowire: true
 
   sonata.user.admin.user:
     class: App\Admin\UserAdmin
@@ -13,3 +12,11 @@ services:
     tags:
       - { name: sonata.admin, manager_type: orm, model_class: App\Entity\User, group: sonata_user, label: users, icon: '<i class="fa fa-user"></i>', show_in_roles_matrix: false, translation_domain: 'SonataUserBundle',label_translator_strategy: underscore }
     public: true
+    
+  admin.company:
+    class: App\Admin\CompanyAdmin
+    parent: admin.abstract
+    tags:
+        - { name: sonata.admin, manager_type: orm, model_class: App\Entity\Company, controller: App\Controller\CompanyAdminController, group: admin, label: company_label, label_translator_strategy: underscore }
+    calls:
+        - [setTemplate,['edit','app/company/edit.html.twig']]
